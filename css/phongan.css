@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #fdfce5;
+  color: black;
+  font-weight: 1000;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: 2s;
+}
+header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+header p {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  margin-top: 5px;
+}
+.h-menu {
+  list-style-type: none;
+  line-height: 70px;
+  margin-right: 20px;
+  display: block;
+  /* display: flex; */
+}
+.h-menu input {
+  float: right;
+  margin-top: 22px;
+  line-height: 30px;
+  padding: 0 20px;
+  border-radius: 10px;
+  display: block;
+  height: 30px;
+}
+.h-menu a > img {
+  width: 70px;
+  float: left;
+  /* margin-left: 30px; */
+  margin-right: 300px;
+  margin-left: 30px;
+}
+.h-menu li {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.h-menu > li:hover {
+  background-color: #ccc;
+  border-top: 2px solid red;
+  padding: 0 20px;
+}
+.h-menu > li a:hover {
+  color: brown;
+}
+
+.h-menu > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.h-menu > li:hover > .sub-menu {
+  display: block;
+  background-color: white;
+  margin-left: -30px;
+}
+
+.sub-menu {
+  position: absolute;
+  display: block;
+  display: none;
+  width: 210px;
+}
+.sub-menu li {
+  display: block;
+  /* float: left; */
+}
+.sub-menu > li:hover {
+  background-color: #ccc;
+  display: block;
+  margin-left: 1px;
+  border-top: 2px solid red;
+}
+.sub-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+.banner img {
+  width: 100%;
+  height: 500px;
+  transform: none;
+  margin-left: 0;
+  margin-top: 100px;
+  position: relative;
+}
+.banner p {
+  position: absolute;
+  top: 300px;
+  left: 650px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 0 0 5px red;
+}
+
+h3 {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.container {
+  height: 2950px;
+  width: 100%;
+  max-width: 1500px;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.container > .boxsanpham {
+  margin: auto;
+  width: 90%;
+  height: 2400px;
+  /* border: 1px solid black; */
+  padding: 20px 55px;
+  display: block;
+}
+.sanpham {
+  width: 23%;
+  height: 270px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+.hinhanh {
+  width: 305px;
+  /* margin-left: 10px; */
+}
+.boxsanpham .hinhanh img {
+  width: 275px;
+  height: 183px;
+  margin-left: 2px;
+}
+.thongtin {
+  display: inline-block;
+  /* border: 1px solid; */
+  width: 270px;
+  height: 50px;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 5px;
+}
+.mua {
+  display: inline-block;
+  margin-left: 5px;
+  /* border:1px solid; */
+  width: 100px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+}
+.thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.thongtin .mua > a:hover {
+  color: yellow;
+}
+
+.ten span {
+  display: inline-block;
+  margin-left: 85px;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+.gia {
+  /* margin-left: 75px; */
+  color: #000;
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 8px;
+}
+.gioithieuphongkhach h2 {
+  text-align: center;
+  font-weight: 999;
+  font-size: 30px;
+  margin-top: 30px;
+}
+.gioithieuphongkhach img {
+  width: 100%;
+  height: 500px;
+  /* display: block; */
+  transition: none;
+  transform: none;
+}
+.gioithieuphongkhach .text {
+  /* margin-top: 50px; */
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.project {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  padding-left: 80px;
+  margin-top: 80px;
+}
+.project > .title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.boxtintuc {
+  width: 24%;
+  height: 389px;
+  display: inline-block;
+}
+.boxtintuc .title {
+  padding-left: 20px;
+}
+.title a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.title p {
+  font-size: 20px;
+}
+.project .boxtintuc img {
+  margin-left: 10px;
+  width: 277px;
+  height: 184px;
+}
+
+.backtotop {
+  background-color: tomato;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 40px;
+  display: flex;
+}
+.backtotop a {
+  color: #fdfce5;
+
+  /* margin-left: 2px;*/
+  margin-top: 5px;
+}
+
+footer {
+  margin: 0 auto;
+  clear: both;
+  color: white;
+  width: 100%;
+  background-color: rgb(150, 118, 118);
+}
+.box-footer {
+  /* border: 1px solid; */
+  margin-left: 5px;
+  height: 80%;
+}
+.footer1 {
+  margin-left: 130px;
+  width: 25%;
+  /* border: 1px solid; */
+  height: 100%;
+  float: left;
+}
+.footer1 .mxh {
+  margin-top: 20px;
+}
+.footer1 i {
+  font-size: 60px;
+  margin-left: 30px;
+}
+.footer1 img {
+  width: 100px;
+  height: 55px;
+}
+.footer2 {
+  margin-left: 60px;
+  width: 25%;
+  float: left;
+  /* border: 1px solid; */
+  /* height: 80%; */
+  height: 100%;
+}
+.footer3 {
+  width: 25%;
+  float: left;
+  /* border: 1px solid; */
+  /* height: 80%; */
+  height: 100%;
+}
+.footer5 {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  border-top: 1px solid;
+  height: 80px;
+  line-height: 80px;
+}
+.footer2 h2 {
+  margin-top: 23px;
+  margin-bottom: 10px;
+  /* text-align: center; */
+  margin-left: 20px;
+  font-size: 30px;
+}
+.footer1 h2 {
+  margin: 20px 20px;
+  font-size: 30px;
+}
+.footer1 p {
+  line-height: 30px;
+  display: block;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.footer2 a {
+  display: block;
+  margin-left: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+}
+.footer3 h2 {
+  margin-top: 23px;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+.footer3 p {
+  font-size: 18px;
+  margin-left: 20px;
+  line-height: 30px;
+}

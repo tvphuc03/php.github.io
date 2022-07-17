@@ -103,33 +103,547 @@ header p {
   font-size: 18px;
   text-align: center;
 }
+
+
+/* banner css */
+.banner {
+  max-width:100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: auto;
+  position: relative;
+}
+
+.banner .contain-img {
+  max-width: 100%;
+  height: 407px;
+  padding-bottom: 37.5%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
 .banner img {
   width: 100%;
-  transform: none;
-  margin-left: 0;
-  display: block;
-  max-height: 400px;
+  height: 100%;
+  position: absolute;
+  left: 100%;
+  top: 0;
 }
+
+/* animation xu ly cho slide banner */
+.imgIn { 
+  animation: moveImgIn 0.3s forwards;
+}
+
+.imgOutRight {
+  animation: moveImgOutRight 0.3s forwards;
+}
+
+.imgOutLeft {
+  animation: moveImgOutLeft 0.3s forwards;
+}
+
+@keyframes moveImgIn {
+  100% {
+      left: 0;
+  }
+}
+
+@keyframes moveImgOutRight {
+  100% {
+      left: 100%;
+  }
+}
+
+@keyframes moveImgOutLeft {
+  100% {
+      left: -100%;
+  }
+}
+
+/* end animation xu ly */
+.next,
+.prev {
+  background-image: url(../images/slide/next.png);
+  background-size: contain;
+  width: 34px;
+  height: 56px;
+  position: absolute;
+  top: calc(50% - 28px);
+  opacity: 0.8;
+  z-index: 1;
+  background-color: black;
+}
+
+.prev {
+  transform: rotate(180deg);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.img-cur-index {
+  width: 200px;
+  height: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 50px);
+}
+
+.cur-index {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* background-color: var(--primary-color); */
+  background-color: #a90000;
+  float: left;
+  margin-left: 10px;
+  opacity: 0.3;
+}
+
+.cur-index:nth-child(1) {
+  margin-left: 0;
+  opacity: 1;
+}
+
+
+
 .container {
   width: 100%;
   height: 1000px;
   margin: auto;
 }
 aside {
+  margin-top: 10px;
   width: 20%;
   height: 100vh;
   display: block;
   float: left;
+  padding-left: 1%;
+}
+aside div{
+  box-shadow: 0px 0px 5px  inset rgb(201, 94, 7);
+  padding-top: 5%;
+  margin-top: 10px;
+}
+aside h2{
+  margin: 5% 5%;
 }
 aside ul {
+  margin-top: 5%;
   margin-left: 10%;
 }
-article {
+aside ul li a{
+  color: black; 
+  text-decoration: none;
+  line-height: 50px;
+}
+article{
   float: left;
   width: 80%;
-  height: 100vh;
-  background-color: aqua;
+  min-height: 100vh;
+  margin-top: 10px;
 }
+article h2{
+  display: flex;
+  justify-content: right;
+  padding: 3%;
+  /* background-color: beige; */
+  line-height: 10px;
+  text-decoration-line:overline;
+  height: 30px;
+  color: red;
+}
+article .boxsanpham1{
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+}
+
+
+.sanpham {
+  width: 23%;
+  height: 270px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+.boxsanpham1 .hinhanh img {
+  width: 99%;
+  height: 183px;
+  margin-left: 2px;
+}
+.thongtin {
+  display: flex;
+  /* border: 1px solid; */
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  justify-content: center;
+}
+.mua {
+  display: inline-block;
+  margin-right:15px;
+  margin-left: 0px;
+  /* border:1px solid; */
+  width: 100px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+}
+.thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.thongtin .mua > a:hover {
+  color: yellow;
+}
+
+.xemchitiet {
+  display: inline-block;
+  /* border:1px solid; */
+  width: 120px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+}
+.thongtin .xemchitiet > a {
+  text-decoration: none;
+  color: white;
+}
+
+.thongtin .xemchitiet > a:hover {
+  color: yellow;
+}
+
+.ten{
+  min-height: 20px;
+}
+.ten span {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+.boxsanpham2{
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+}
+.boxsanpham2 .sanphamlon {
+  width: 50%;
+  min-height: 400px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+
+.boxsanpham2 .sanphamlon .hinhanh img {
+  width: 99%;
+  height: 373px;
+  margin-left: 2px;
+}
+.sanphamlon .thongtin {
+  display: inline-block;
+  /* border: 1px solid; */
+  width: 100%;
+  text-align: center;
+  font-display:flex;
+}
+.sanphamlon .mua {
+  display: inline-block;
+  margin-left: 30px;
+  /* border:1px solid; */
+  width: 130px;
+  height: 40px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  line-height: 30px;
+}
+.sanphamlon .xemchitiet {
+  display: inline-block;
+  /* border:1px solid; */
+  width: 150px;
+  height: 40px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  line-height: 30px;
+}
+.sanphamlon .thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.sanphamlon .thongtin .mua > a:hover {
+  color: yellow;
+}
+.ten{
+  min-height: 20px;
+}
+.sanphamlon .ten span {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.gop{
+  width: 50%;
+  height:500px;
+  display: inline-block;
+}
+.gop .sanpham {
+  width:45%;
+  height: 230px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  float:left;
+}
+.boxsanpham2 .gop .hinhanh img {
+  width: 99%;
+  height: 150px;
+  margin-left: 2px;
+}
+.boxsanpham2 .gop .thongtin {
+  display: inline-block;
+  /* border: 1px solid; */
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 0px;
+}
+.boxsanpham2 .gop .mua {
+  font-size: 15px;
+  line-height: 23px;
+  display: inline-block;
+  margin-left: -1px;
+  /* border:1px solid; */
+  width: 95px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+}
+.gop .xemchitiet {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 23px;
+  /* border:1px solid; */
+  width: 115px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  margin-left: -10px;
+}
+.gop .thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.gop .thongtin .mua > a:hover {
+  color: yellow;
+}
+.gop .ten{
+  min-height: 20px;
+}
+.gop .ten span {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+
+
+.boxsanpham3{
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+}
+.boxsanpham3 .sanphamlon {
+  width: 48.5%  ;
+  min-height: 400px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+
+.boxsanpham3 .sanphamlon .hinhanh img {
+  width: 99%;
+  height: 373px;
+  margin-left: 2px;
+}
+.sanphamlon .thongtin {
+  display: inline-block;
+  /* border: 1px solid; */
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 0px;
+  font-display:flex;
+}
+.sanphamlon .mua {
+  display: inline-block;
+  margin-left: 30px;
+  /* border:1px solid; */
+  width: 130px;
+  height: 40px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  line-height: 35px;
+}
+.sanphamlon .xemchitiet {
+  display: inline-block;
+  /* border:1px solid; */
+  width: 150px;
+  height: 40px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  line-height: 35px;
+}
+.sanphamlon .thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.sanphamlon .thongtin .mua > a:hover {
+  color: yellow;
+}
+.ten{
+  min-height: 20px;
+}
+.sanphamlon .ten span {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.boxsanpham3{
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+}
+
+.gop{
+  width: 50%;
+  height:500px;
+  display: inline-block;
+}
+.gop .sanpham {
+  width:45%;
+  height: 230px;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  float:left;
+}
+.boxsanpham3 .gop .hinhanh img {
+  width: 99%;
+  height: 150px;
+  margin-left: 2px;
+}
+.boxsanpham3 .gop .thongtin {
+  display: inline-block;
+  /* border: 1px solid; */
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 0px;
+}
+.boxsanpham3 .gop .mua {
+  font-size: 15px;
+  line-height: 23px;
+  display: inline-block;
+  margin-left: -1px;
+  /* border:1px solid; */
+  width: 95px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+}
+.gop .xemchitiet {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 23px;
+  /* border:1px solid; */
+  width: 115px;
+  height: 30px;
+  padding-top: 3px;
+  background-color: brown;
+  box-shadow: 0 0 5px brown;
+  border-radius: 5px;
+  margin-left: -10px;
+}
+.gop .thongtin .mua > a {
+  text-decoration: none;
+  color: white;
+}
+
+.gop .thongtin .mua > a:hover {
+  color: yellow;
+}
+.gop .ten{
+  min-height: 20px;
+}
+.gop .ten span {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+
 
 .project > .title {
   text-align: center;
@@ -137,7 +651,7 @@ article {
   font-size: 28px;
 }
 .project {
-  box-shadow: 0 0 5px;
+  box-shadow: 0 0 5px rgb(206, 205, 205);
   margin: 5px auto;
   width: 100%;
   min-height: 370px;

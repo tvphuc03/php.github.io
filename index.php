@@ -10,6 +10,12 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
+<?php
+include_once("./php/connect.php");
+$sql = "select * from sanpham";
+$result = $db->query($sql);
+?>
+
 <html>
 <div id="top"></div>
 <header>
@@ -51,20 +57,14 @@
                 </ul>
             </li>
 
-            <li><a href="#">Sàn Gỗ - Cửa</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Sàn Gỗ Hiện Đại</a></li>
-                    <li><a href="#">Sàn Gỗ Cổ Điển</a></li>
-                    <li><a href="#">Cửa Hiện Đại</a></li>
-                    <li><a href="#">Cửa Cổ Điển</a></li>
-                </ul>
+            <li><a href="#">Giới Thiệu</a>
             </li>
+            <li><a href="./pages/lienhe.html">Liên Hệ</a></li>
             <li><a href="./pages/dktk.html">Tài Khoản</a></li>
             <!-- <li><a href=""></a></li> -->
             <input type="text" placeholder=" Tìm Kiếm... ">
 
 
-            <li><a href="./pages/lienhe.html">Liên Hệ</a></li>
         </ul>
     </b>
 </header>
@@ -123,21 +123,18 @@
         <div class="hotro">
             <h2>Hỗ Trợ Trực Tuyến</h2>
             <ul>
-                <li><a href="">Đèn treo tường</a></li>
-                <li><a href="">Bình Hoa Trang Trí</a></li>
-                <li><a href="">Bộ Trang Trí Theo Mùa</a></li>
-                <li><a href="">Đồng Hồ</a></li>
-                <li><a href="">Tác Phẩm Nghệ Thuật</a></li>
-                <li><a href="">Bình Gỗ Mộc Trang Trí</a></li>
-                <li><a href="">Gương Trang Trí</a></li>
-                <li><a href="">Tranh Trang Trí</a></li>
-                <li><a href="">Tiểu cảnh cây để bàn </a></li>
+                <li><a href="">HOTLINE: 0358959353</a></li>
             </ul>
         </div>
 
 
 
     </aside>
+
+    <?php
+        while ($row = $result->fetch()) {
+        ?>
+
     <article>
         <h2>Sản Phẩm </h2>
         <div class="boxsanpham1">
@@ -313,6 +310,8 @@
         </div>
 
     </article>
+    <?php }
+        ?>
 </div>
 
 

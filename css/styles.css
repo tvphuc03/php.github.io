@@ -129,6 +129,7 @@ header p {
   position: absolute;
   left: 100%;
   top: 0;
+  transform: none;
 }
 
 /* animation xu ly cho slide banner */
